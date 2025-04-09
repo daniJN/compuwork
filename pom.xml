@@ -10,4 +10,19 @@
         <maven.compiler.release>24</maven.compiler.release>
         <exec.mainClass>com.mycompany.compuwork.CompuWork</exec.mainClass>
     </properties>
+    <dependencies>
+        <!-- Dependencia de JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.13.0-M2</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 </project>

@@ -87,5 +87,47 @@ public class Empleado {
         this.tipoEmpleado = tipoEmpleado;
     }
     
-    
+    public double calcularSalario() {
+    double salarioFinal = salario;
+
+    if (tipoEmpleado != null) {
+        switch (tipoEmpleado.toLowerCase()) {
+            case "tiempocompleto":
+                salarioFinal += salario * 0.10; // 10% bono
+                break;
+            case "mediotiempo":
+                salarioFinal += salario * 0.05; // 5% bono
+                break;
+            case "contratista":
+                // Sin bono
+                break;
+            default:
+                System.out.println("Tipo de empleado no reconocido.");
+                break;
+        }
+    }
+
+    return salarioFinal;
+}
+    public double calcularSalarioConBono() {
+    double bono = 0;
+
+    if (tipoEmpleado != null) {
+        switch (tipoEmpleado.toLowerCase()) {
+            case "temporal":
+                bono = 0.10; // 10%
+                break;
+            case "permanente":
+                bono = 0.20; // 20%
+                break;
+            default:
+                bono = 0.05; // Otro tipo, 5%
+                break;
+        }
+    }
+
+    return salario + (salario * bono);
+}
+
+
 }
